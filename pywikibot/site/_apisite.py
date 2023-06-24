@@ -2002,7 +2002,7 @@ class APISite(
                         captcha = result['edit']['captcha']
                         req['captchaid'] = captcha['id']
 
-                        if captcha['type'] in ['math', 'simple']:
+                        if captcha['type'] in ['math', 'simple', 'question']:
                             req['captchaword'] = input(captcha['question'])
                             continue
 
